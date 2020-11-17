@@ -1,0 +1,37 @@
+#+title: My first presentation
+#+author: Nicky van Foreest
+#+date: 2020:11:12
+#+email: n.d.van.foreest@rug.nl
+
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_THEME: black
+#+OPTIONS: toc:nil num:nil reveal_mathjax:t
+# Ik geloof dat onderstaande default is.
+#+REVEAL_TRANS: linear    
+#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Org-Reveal Introduction.">
+#+REVEAL_POSTAMBLE: <p> Created by Nicky. </p>
+# Die notes lijken niet te werken
+#+REVEAL_PLUGINS: (notes)
+
+* Slide 1
+
+Voor extra info over gebruik reveal en org: 
+- http://jr0cket.co.uk/2013/10/create-cool-slides--Org-mode-Revealjs.html
+- http://jr0cket.co.uk/2014/01/github-pages-for-revealjs-slides-via-emacs-org-mode.html.html
+#+BEGIN_NOTES
+  Enter speaker notes here.
+#+END_NOTES
+
+* slide 2
+
+- $a^2 + b^2 = c^2$
+- $a^2 + b^2 = c^2$
+- $a^2 + b^2 = c^2$
+
+
+#+begin_src python
+def f(a):
+    return a
+
+print(b)
+#+end_src
