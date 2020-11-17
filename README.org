@@ -1,1 +1,17 @@
-- [[demo_reveal.html]]
+#+title: Slides
+#+author: Nicky van Foreest
+#+date: 2020:11:17
+
+I used the following sites:
+
+- https://cestlaz.github.io/posts/using-emacs-11-reveal/
+- https://cestlaz.github.io/posts/using-emacs-50-presentations/
+- https://github.com/zamansky/using-emacs/tree/master/samples/reveal
+- http://jr0cket.co.uk/2013/10/create-cool-slides--Org-mode-Revealjs.html
+- http://jr0cket.co.uk/2014/01/github-pages-for-revealjs-slides-via-emacs-org-mode.html.html
+
+  As I already have a github.pages site, I just makd a =slides= repo.
+  Then I cloned it, made a branch =gh-pages=, and changed to working in this branch.
+  Once this was done, I added a =slides.org= page and a link in =conf.py= to my github.pages site. Finally, I put a link in to my presentations in the =slides.org= page. And that was all I had to do, save a =nikola github_deploy=.
+  And that was all
+

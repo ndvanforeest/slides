@@ -16,8 +16,6 @@
 * Slide 1
 
 Voor extra info over gebruik reveal en org: 
-- http://jr0cket.co.uk/2013/10/create-cool-slides--Org-mode-Revealjs.html
-- http://jr0cket.co.uk/2014/01/github-pages-for-revealjs-slides-via-emacs-org-mode.html.html
 #+BEGIN_NOTES
   Enter speaker notes here.
 #+END_NOTES
