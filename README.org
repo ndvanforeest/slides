@@ -10,8 +10,9 @@ I used the following sites:
 - http://jr0cket.co.uk/2013/10/create-cool-slides--Org-mode-Revealjs.html
 - http://jr0cket.co.uk/2014/01/github-pages-for-revealjs-slides-via-emacs-org-mode.html.html
 
-  As I already have a github.pages site, I just makd a =slides= repo.
-  Then I cloned it, made a branch =gh-pages=, and changed to working in this branch.
-  Once this was done, I added a =slides.org= page and a link in =conf.py= to my github.pages site. Finally, I put a link in to my presentations in the =slides.org= page. And that was all I had to do, save a =nikola github_deploy=.
-  And that was all
+As I already have a github.pages site, I just made a =slides= repo.
+Then I cloned it, made a branch =gh-pages=, and changed to working in this branch.
+Once this was done, I went to my homepage repo. There I added a =slides.org= page and a link in =conf.py= to my github.pages site.
+Finally, I put a link in to my presentations in the =slides.org= page.
+And that was all I had to do, except for the final =nikola github_deploy=.
 
