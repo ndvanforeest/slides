@@ -2,7 +2,7 @@
 #+author: Nicky van Foreest
 #+date: 2020:11:17
 
-I used the following sites:
+I used the following sites to get this working:
 
 - https://cestlaz.github.io/posts/using-emacs-11-reveal/
 - https://cestlaz.github.io/posts/using-emacs-50-presentations/
