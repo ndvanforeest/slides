@@ -3,11 +3,12 @@
 #+date: 2020:11:12
 #+email: n.d.van.foreest@rug.nl
 
+
 #+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
 #+REVEAL_THEME: black
 #+OPTIONS: toc:nil num:nil reveal_mathjax:t
 # Ik geloof dat onderstaande default is.
-#+REVEAL_TRANS: linear    
+#+REVEAL_TRANS: linear
 #+REVEAL_HEAD_PREAMBLE: <meta name="description" content="Org-Reveal Introduction.">
 #+REVEAL_POSTAMBLE: <p> Created by Nicky. </p>
 # Die notes lijken niet te werken
@@ -15,7 +16,7 @@
 
 * Slide 1
 
-Voor extra info over gebruik reveal en org: 
+Voor extra info over gebruik reveal en org:
 #+BEGIN_NOTES
   Enter speaker notes here.
 #+END_NOTES
