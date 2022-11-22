@@ -2,6 +2,16 @@
 #+author: Nicky van Foreest
 #+date: 2020:11:17
 
+* steps followed
+
+1. Make a =slides= repo on github
+2. Clone it to a  local machine.
+3. Add a =presentations.org= page to =pages= subdir in the  homepage (via nikola)
+4. In  =presentations.org= page, include links to the presentations
+5. Update the homepage  with =nikola github_deploy=.
+
+* sites used
+
 I used the following sites to get this working:
 
 - https://cestlaz.github.io/posts/using-emacs-11-reveal/
@@ -9,10 +19,3 @@ I used the following sites to get this working:
 - https://github.com/zamansky/using-emacs/tree/master/samples/reveal
 - http://jr0cket.co.uk/2013/10/create-cool-slides--Org-mode-Revealjs.html
 - http://jr0cket.co.uk/2014/01/github-pages-for-revealjs-slides-via-emacs-org-mode.html.html
-
-As I already have a github.pages site, I just made a =slides= repo.
-Then I cloned it, made a branch =gh-pages=, and changed to working in this branch.
-Once this was done, I went to my homepage repo. There I added a =slides.org= page and a link in =conf.py= to my github.pages site.
-Finally, I put a link in to my presentations in the =slides.org= page.
-And that was all I had to do, except for the final =nikola github_deploy=.
-
