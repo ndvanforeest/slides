@@ -4,11 +4,19 @@
 
 * steps followed
 
+
+** Initial Setup
+
 1. Make a =slides= repo on github
 2. Clone it to a  local machine.
-3. Add a =presentations.org= page to =pages= subdir in the  homepage (via nikola)
-4. In  =presentations.org= page, include links to the presentations
-5. Update the homepage  with =nikola github_deploy=.
+3. Add a =presentations.org= page to =pages= subdir on my  homepage dir (i.e., the local repo)
+
+** Adding a presentation
+
+1. Copy (make) the html file of the related  presentation in org mode to this repo (the slides repo)
+2. Add the file, commit, and push with git
+3. In  =presentations.org= page in the homepage dir (the locol repo), include links to the presentation.
+4. Update the homepage  with =nikola github_deploy=.
 
 * sites used
 
