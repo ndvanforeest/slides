@@ -18,6 +18,10 @@
 3. In  =presentations.org= page in the homepage dir (the locol repo), include links to the presentation.
 4. Update the homepage  with =nikola github_deploy=.
 
+** Checking
+1. Check that the links work via the ndvanforeest.github.io/presentations.
+2. YOu might need to refresh the links and the pages to see the latest version of the presentation.
+
 * sites used
 
 I used the following sites to get this working:
