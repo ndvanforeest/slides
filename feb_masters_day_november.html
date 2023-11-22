@@ -13,6 +13,17 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/serif.css" id="theme"/>
 
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
 </head>
 <body>
 <div class="reveal">
@@ -20,37 +31,26 @@
 <section id="sec-title-slide"><h1 class="title">MSc EORAS</h1><p class="subtitle">FEB Master day</p>
 <h2 class="author">dr. Nicky van Foreest, prof. dr. Ruud Koning</h2><h2 class="email"><a href="mailto:n.d.van.foreest@rug.nl">n.d.van.foreest@rug.nl</a></h2>
 </section>
-<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#/slide-org8ff77bd">1. MSc EORAS Overview</a></li>
-<li><a href="#/slide-org7f2d2e1">2. Employability</a></li>
-<li><a href="#/slide-org77ba89e">3. MSc EORAS Programme Organization</a></li>
-</ul>
-</div>
-</div>
-</section>
 <section>
-<section id="slide-org8ff77bd">
-<h2 id="org8ff77bd"><span class="section-number-2">1.</span> MSc EORAS Overview</h2>
+<section id="slide-orgb4fe4a4">
+<h2 id="orgb4fe4a4"><span class="section-number-2">1.</span> MSc EORAS Overview</h2>
 <div class="outline-text-2" id="text-1">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgaf0a763">
-<h3 id="orgaf0a763"><span class="section-number-3">1.1.</span> EORAS in short</h3>
+<section id="slide-orge65d0ff">
+<h3 id="orge65d0ff"><span class="section-number-3">1.1.</span> EORAS in short</h3>
 <ol>
-<li>MSc EORAS is <i>the advanced</i> data science master programme of FEB</li>
+<li>MSc EORAS is <i>the advanced</i> data science master program of FEB</li>
 <li>MSc EORAS courses are applied and use quantitative methods to model, analyze, and improve (mostly business) problems.</li>
 
 </ol>
 </section>
 </section>
 <section>
-<section id="slide-org0cbe1c0">
-<h3 id="org0cbe1c0"><span class="section-number-3">1.2.</span> EORAS illustrated  by example</h3>
+<section id="slide-orgff005c4">
+<h3 id="orgff005c4"><span class="section-number-3">1.2.</span> EORAS illustrated  by example</h3>
 <p>
 Illustration by example: Keep the city clean in a smart way by efficiently organizing waste collection.
 </p>
@@ -62,8 +62,8 @@ Illustration by example: Keep the city clean in a smart way by efficiently organ
 </section>
 </section>
 <section>
-<section id="slide-org10f6c66">
-<h3 id="org10f6c66"><span class="section-number-3">1.3.</span> EORAS in steps</h3>
+<section id="slide-org322cfbd">
+<h3 id="org322cfbd"><span class="section-number-3">1.3.</span> EORAS in steps</h3>
 <ol>
 <li>Design/adapt rules to improve/control/change the behavior of systems
 (e.g. machines/population).</li>
@@ -77,13 +77,13 @@ under the proposed rules.</li>
 </section>
 </section>
 <section>
-<section id="slide-org87914a9">
-<h3 id="org87914a9"><span class="section-number-3">1.4.</span> Why chose MSc EORAS in Groningen?</h3>
+<section id="slide-orge7ef2ea">
+<h3 id="orge7ef2ea"><span class="section-number-3">1.4.</span> Why chose MSc EORAS in Groningen?</h3>
 <ol>
 <li>Unique mixture between data science and the
 application of data in decision making.</li>
 <li>Considerable freedom to make your own course portfolio to match with your
-personal/profesional current/future interests.</li>
+personal/professional current/future interests.</li>
 <li>The master is relatively small, hence opportunity for personal
 contact with staff.</li>
 <li>Groningen is the healthiest city of The Netherlands (Arcadis, 2022)</li>
@@ -92,18 +92,18 @@ contact with staff.</li>
 </section>
 </section>
 <section>
-<section id="slide-orgdfc9752">
-<h3 id="orgdfc9752"><span class="section-number-3">1.5.</span> Why chose MSc EORAS in Groningen?</h3>
+<section id="slide-org726c991">
+<h3 id="org726c991"><span class="section-number-3">1.5.</span> Why chose MSc EORAS in Groningen?</h3>
 
-<div id="org3e95286" class="figure">
+<div id="orgf396529" class="figure">
 <p><img src="./DutchStudentSurvey2022-1.png" alt="DutchStudentSurvey2022-1.png" />
 </p>
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org2496f21">
-<h3 id="org2496f21"><span class="section-number-3">1.6.</span> Is the MSc EORAS suitable for you?</h3>
+<section id="slide-orgc9276ab">
+<h3 id="orgc9276ab"><span class="section-number-3">1.6.</span> Is the MSc EORAS suitable for you?</h3>
 <ol>
 <li>MSc EORAS requires considerable background and investment in
 mathematical modeling and probability/statistics.</li>
@@ -116,56 +116,88 @@ results is very important.</li>
 </section>
 </section>
 <section>
-<section id="slide-org7f2d2e1">
-<h2 id="org7f2d2e1"><span class="section-number-2">2.</span> Employability</h2>
+<section id="slide-orgd5a8ad2">
+<h2 id="orgd5a8ad2"><span class="section-number-2">2.</span> Employability</h2>
 <div class="outline-text-2" id="text-2">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org5cd1ade">
-<h3 id="org5cd1ade"><span class="section-number-3">2.1.</span> Career perspectives</h3>
+<section id="slide-org770b3c7">
+<h3 id="org770b3c7"><span class="section-number-3">2.1.</span> Career perspectives</h3>
 <ol>
-<li>Job prospective is excellent. Students find jobs within weeks after
+<li>Job prospective is excellent. Students find a job they like within weeks after
 (or even before) completing the MSc EORAS.</li>
 <li>Students find jobs in consultancy firms, banks, insurance companies
-pension funds, government (supervisory authorities, c3ompetition
+pension funds, government (supervisory authorities, competition
 authorities, central planning office)</li>
-<li>Employers find it important that our students `speak' multiple programming languages (python, R)</li>
+<li>Employers find it important that our students have a decent level of programming skills  (in python, R, C++).</li>
 
 </ol>
 </section>
 </section>
 <section>
-<section id="slide-org1450a6b">
-<h3 id="org1450a6b"><span class="section-number-3">2.2.</span> LinkedIn connections with ex-students (of Ruud Koning)</h3>
+<section id="slide-orgfb4d6e4">
+<h3 id="orgfb4d6e4"><span class="section-number-3">2.2.</span> LinkedIn connections (selection)</h3>
 <p>
-Partner BCG, Aegon, pricing actuary Achmea, APG Asset Management, ASR, Data Analyst Ahold Delhaize, bol.com, ORTEC, PhD Student University of Oxford, Data Analyst LOGEX, professor at University of Groningen, designer at ATOS, senior policy advisor Dutch Healthcare Authority, supervisor national insurance groups at De Nederlandsche Bank, researcher ACM.
+Partner BCG, Aegon, pricing actuary Achmea, APG Asset Management, ASR, Data Analyst Ahold Delhaize, bol.com, LHCP, ORTEC, PhD Student University of Oxford, Data Analyst LOGEX, professor at University of Groningen, designer at ATOS, senior policy advisor Dutch Healthcare Authority, supervisor national insurance groups at De Nederlandsche Bank, researcher ACM.
 </p>
 </section>
 </section>
 <section>
-<section id="slide-orgba553be">
-<h3 id="orgba553be"><span class="section-number-3">2.3.</span> Relation to practice</h3>
+<section id="slide-orgfb500fc">
+<h3 id="orgfb500fc"><span class="section-number-3">2.3.</span> Job Advertisement 1</h3>
+<ul>
+<li>Job title from site of VESTING: Operations Research Specialist</li>
+<li>Job qualifications: Analysis, programming, development of (simulation) models, demand-supply optimization. Using new methods and tools in Operations Research.</li>
+<li>Match with our Courses: Data Analysis and Machine Learning, Data-driven Optimization, Demand Analysis and Inventory Control, Design of Combinatorial Algorithms, Econometric Methods.</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgb02337a">
+<h3 id="orgb02337a"><span class="section-number-3">2.4.</span> Job Advertisement 2</h3>
+<ul>
+<li>Job title from site of VESTING: Data Scientist at Bell Simpel</li>
+<li>Job qualifications: Web performance, analysing improvement strategies, process automation, data driven decision making, premium optimzation for phone insurance.</li>
+<li>Match with our Courses: Data Analysis and Machine Learning, Data-driven Optimization, Econometric Methods for Data Analysis, Non-normal Data Analysis, Applied Microeconometrics</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgf4a7fcf">
+<h3 id="orgf4a7fcf"><span class="section-number-3">2.5.</span> Job Advertisement 3</h3>
+<ul>
+<li>Job title from VESTING: Junior consultant Quant at Sprengels</li>
+<li>Job qualifications: risk management,  financial analysis, quantitative models, strategic consultance and data analysis</li>
+<li>Match with our courses: Non-normal Data Analysis, Econometric Models, Models for Short Term Risk Management, Quantitative Finance, Investing, Uncertainty and Climate Risk</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org5541ddd">
+<h3 id="org5541ddd"><span class="section-number-3">2.6.</span> Relation to practice</h3>
 <ol>
 <li>Courses and assignments include many practical cases which are based on company problems and company data.</li>
 <li>If you like, you can combine your  thesis project with an internship at a company anywhere in The Netherlands or abroad.</li>
 <li>Program management (prof. dr. R.H. Koning and me) collaborate closely with VESTING (the student association) on employability, such as intern ships, jobs, alumni days.</li>
-<li>Students find a job very easily.</li>
 
 </ol>
 </section>
 </section>
 <section>
-<section id="slide-org77ba89e">
-<h2 id="org77ba89e"><span class="section-number-2">3.</span> MSc EORAS Programme Organization</h2>
+<section id="slide-org0471560">
+<h2 id="org0471560"><span class="section-number-2">3.</span> MSc EORAS Programme Organization</h2>
 <div class="outline-text-2" id="text-3">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org70d8185">
-<h3 id="org70d8185"><span class="section-number-3">3.1.</span> What are the entrance requirements?</h3>
+<section id="slide-org8b96c6e">
+<h3 id="org8b96c6e"><span class="section-number-3">3.1.</span> What are the entrance requirements?</h3>
 <ol>
 <li>BSc degree at BSc EOR level.</li>
 <li>Pre-MSc program for students with BSc in economics, industrial
@@ -176,8 +208,8 @@ engineering and management, physics, engineering, mathematics, chemistry.</li>
 </section>
 </section>
 <section>
-<section id="slide-orgbf817e6">
-<h3 id="orgbf817e6"><span class="section-number-3">3.2.</span> How is the  programme organized?</h3>
+<section id="slide-org82daaf1">
+<h3 id="org82daaf1"><span class="section-number-3">3.2.</span> How is the  programme organized?</h3>
 <ol>
 <li>1st semester: preferably 5&#x2013;6 courses, each 5 EC</li>
 <li>2nd semester: 2&#x2013;3 courses, each 5 EC, Master's thesis, 20 EC.</li>
@@ -188,66 +220,30 @@ engineering and management, physics, engineering, mathematics, chemistry.</li>
 </section>
 </section>
 <section>
-<section id="slide-orgd49bb4c">
-<h3 id="orgd49bb4c"><span class="section-number-3">3.3.</span> MSc EORAS, 4 profiles</h3>
+<section id="slide-org81dc9d1">
+<h3 id="org81dc9d1"><span class="section-number-3">3.3.</span> MSc EORAS, 4 profiles</h3>
 <ol>
+<li>Data Science</li>
 <li>Actuarial Studies</li>
 <li>Operations Research</li>
 <li>Econometrics</li>
-<li>Data Science</li>
 
 </ol>
 </section>
 </section>
 <section>
-<section id="slide-org05ba2c5">
-<h3 id="org05ba2c5"><span class="section-number-3">3.4.</span> What is Actuarial Studies?</h3>
+<section id="slide-org9e70747">
+<h3 id="org9e70747"><span class="section-number-3">3.4.</span> What is Data Science?</h3>
 <ol>
-<li>Risk management for the financial sector (insurance companies, pension
-funds, banks).</li>
-<li>Calculating insurance premiums for insurance and pensions.</li>
-<li>Modeling mortality and longevity risks.</li>
-<li>Modeling extreme events.</li>
+<li>Given the available data, make sound (business) decisions</li>
+<li>Given the type of decisions that need to be made: determine the data that is necessary.</li>
 
 </ol>
 </section>
 </section>
 <section>
-<section id="slide-org2577bb7">
-<h3 id="org2577bb7"><span class="section-number-3">3.5.</span> Actuarial Studies: Recent MSc Thesis titles</h3>
-<ul>
-<li>The Risks of Climate Change: An Insurance-based Perspective on Extreme Weather Events in The Netherlands. (EY)</li>
-<li>Probability of default modeling under IFRS 9: A macroeconomic approach. (Deloitte)</li>
-
-</ul>
-</section>
-</section>
-<section>
-<section id="slide-org5579934">
-<h3 id="org5579934"><span class="section-number-3">3.6.</span> What is Operations Research?</h3>
-<ol>
-<li>Quantitative decision making for business problems.</li>
-<li>Solving complex optimization problems, for example logistic or
-planning problems.</li>
-<li>Finding heuristic (=approximate) solutions to very large problems,
-e.g., control and maintenance of wind mill farms..</li>
-
-</ol>
-</section>
-</section>
-<section>
-<section id="slide-orgc1ace9f">
-<h3 id="orgc1ace9f"><span class="section-number-3">3.7.</span> Operations Research: Recent MSc Thesis titles</h3>
-<ul>
-<li>Speed Optimisation: Reducing Fuel Consumption in the Shipping Industry</li>
-<li>Optimizing Maintenance Decisions for Systems with Deterioration-Dependent Production Rates.</li>
-
-</ul>
-</section>
-</section>
-<section>
-<section id="slide-orge927271">
-<h3 id="orge927271"><span class="section-number-3">3.8.</span> What is Econometrics?</h3>
+<section id="slide-orgd9c9974">
+<h3 id="orgd9c9974"><span class="section-number-3">3.5.</span> What is Econometrics?</h3>
 <ol>
 <li>Quantifying causal relations among economic variables.</li>
 <li>Forecasting economic variables, such as demand, unemployment, or
@@ -260,8 +256,8 @@ inflation.</li>
 </section>
 </section>
 <section>
-<section id="slide-org6df6c97">
-<h3 id="org6df6c97"><span class="section-number-3">3.9.</span> Econometrics: Recent MSc Thesis titles</h3>
+<section id="slide-org57d184b">
+<h3 id="org57d184b"><span class="section-number-3">3.6.</span> Econometrics: Recent MSc Thesis titles</h3>
 <ul>
 <li>Global portfolio diversification from a eurozone perspective.</li>
 <li>Estimating the Eﬀects of Patient Intensity on Physician’s Time Spent on a Patient to Review Care Product Lead Times. (Logex)</li>
@@ -270,20 +266,56 @@ inflation.</li>
 </section>
 </section>
 <section>
-<section id="slide-orge874a6e">
-<h3 id="orge874a6e"><span class="section-number-3">3.10.</span> What is Data Science?</h3>
+<section id="slide-orgf2c1450">
+<h3 id="orgf2c1450"><span class="section-number-3">3.7.</span> What is Operations Research?</h3>
 <ol>
-<li>Given the available data, make sound (business) decisions</li>
-<li>Given the type of decisions that need to be made: determine the data that is necessary.</li>
+<li>Quantitative decision making for business problems.</li>
+<li>Solving complex optimization problems, for example logistic or
+planning problems.</li>
+<li>Finding heuristic (=approximate) solutions to very large problems,
+e.g., control and maintenance of wind mill farms..</li>
 
 </ol>
 </section>
 </section>
 <section>
-<section id="slide-org26ea478">
-<h3 id="org26ea478"><span class="section-number-3">3.11.</span> Commonality in all four profiles</h3>
+<section id="slide-org7748a9d">
+<h3 id="org7748a9d"><span class="section-number-3">3.8.</span> Operations Research: Recent MSc Thesis titles</h3>
 <ul>
-<li>Avanced data analytics (on big data sets).</li>
+<li>Speed Optimization: Reducing Fuel Consumption in the Shipping Industry</li>
+<li>Optimizing Maintenance Decisions for Systems with Deterioration-Dependent Production Rates.</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org325a906">
+<h3 id="org325a906"><span class="section-number-3">3.9.</span> What is Actuarial Studies?</h3>
+<ol>
+<li>Risk management for the financial sector (insurance companies, pension
+funds, banks).</li>
+<li>Calculating insurance premiums for insurance and pensions.</li>
+<li>Modeling mortality and longevity risks.</li>
+<li>Modeling extreme events.</li>
+
+</ol>
+</section>
+</section>
+<section>
+<section id="slide-orgbe53718">
+<h3 id="orgbe53718"><span class="section-number-3">3.10.</span> Actuarial Studies: Recent MSc Thesis titles</h3>
+<ul>
+<li>The Risks of Climate Change: An Insurance-based Perspective on Extreme Weather Events in The Netherlands. (EY)</li>
+<li>Probability of default modeling under IFRS 9: A macroeconomic approach. (Deloitte)</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org5be1260">
+<h3 id="org5be1260"><span class="section-number-3">3.11.</span> Commonality in all four profiles</h3>
+<ul>
+<li>Advanced data analytics (on big data sets).</li>
 <li>Human behavior and feedback play an important role.</li>
 <li>Mathematical methods are similar.</li>
 <li>Multi viewpoints are necessary to understand and model large practical problems.</li>
@@ -293,16 +325,16 @@ inflation.</li>
 </section>
 </section>
 <section>
-<section id="slide-orge00de9f">
-<h3 id="orge00de9f"><span class="section-number-3">3.12.</span> How can I meet my main interests?</h3>
+<section id="slide-org11707c1">
+<h3 id="org11707c1"><span class="section-number-3">3.12.</span> How can I meet my main interests?</h3>
 <p>
-There are four profiles, within each you have considerable freedom to compose a suitable MSc programme.
+There are four profiles, within each you have considerable freedom to compose a suitable MSc program.
 </p>
 </section>
 </section>
 <section>
-<section id="slide-org5ae9dd1">
-<h3 id="org5ae9dd1"><span class="section-number-3">3.13.</span> Example track, AS/Risk management</h3>
+<section id="slide-org23d7162">
+<h3 id="org23d7162"><span class="section-number-3">3.13.</span> Example track, AS/Risk management</h3>
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -358,27 +390,30 @@ There are four profiles, within each you have considerable freedom to compose a 
 </tr>
 </tbody>
 </table>
-
-
-<p>
-#* Remaining Questions?
-</p>
+</section>
+</section>
+<section>
+<section id="slide-org905039d">
+<h2 id="org905039d"><span class="section-number-2">4.</span> Remaining Questions?</h2>
 </section>
 </section>
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom/zoom.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js"></script>
-
 
 <script>
 // Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
-plugins: [RevealMarkdown, RevealZoom, RevealNotes],
-transition: 'cube'
+transition: 'fade',
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
 });
 
 </script>
