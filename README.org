@@ -11,6 +11,12 @@
 2. Clone it to a  local machine.
 3. Add a =presentations.org= page to =pages= subdir on my  homepage dir (i.e., the local repo)
 
+** making the presentation
+
+- Copy some relevant file
+- run =M-x load-library=, load =ox-reveal=
+- Check the commands with =C-c C-e=.
+
 ** Adding a presentation
 
 1. Copy (make) the html file of the related  presentation in org mode to this repo (the slides repo)

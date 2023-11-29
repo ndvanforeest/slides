@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Stochastic OR/QTS</title>
+<meta name="author" content="Nicky"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/serif.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Stochastic OR/QTS</h1><p class="subtitle"></p>
+<h2 class="author">Nicky</h2><h2 class="email"><a href="mailto:nicky@chuck">nicky@chuck</a></h2>
+</section>
+<section>
+<section id="slide-org7ed8caf">
+<h2 id="org7ed8caf"><span class="section-number-2">1.</span> Design</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org81c7069">
+<h3 id="org81c7069"><span class="section-number-3">1.1.</span> Course design</h3>
+<ul>
+<li>Make simple stochastic models for real cases, e.g., psychiatrist planning.</li>
+<li>Code, in Python, models to simulate, compute KPIs, and analyze control policies</li>
+<li>Develop exact models for simple cases, e.g., waiting time formula for \(M/G/1\)</li>
+<li>Code, in Python, the simple models</li>
+<li>Make approximate models</li>
+<li>Code, in Python, these approximations</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgb81bbd0">
+<h3 id="orgb81bbd0"><span class="section-number-3">1.2.</span> Approach</h3>
+<ol>
+<li>Start with memoryless property of exponential, Poisson.</li>
+<li>Use simulation to construct sample paths for stochastic process; develop intuition for such systems.</li>
+<li>Compute KPI's based on sample paths</li>
+<li>Develop a discrete event simulation from scratch with heapqueues</li>
+
+</ol>
+</section>
+</section>
+<section>
+<section id="slide-org801a3b9">
+<h3 id="org801a3b9"><span class="section-number-3">1.3.</span> Approach 2</h3>
+<ol>
+<li>Analyze the sample paths analytically to get theoretical tools:
+<ol>
+<li>renewal reward theorem,</li>
+<li>Little' law</li>
+<li>Pasta</li>
+<li>Level crossing (build up to Markov chains)</li>
+
+</ol></li>
+<li>Applications of theoretical tools: \(M/M/1\), \(M/G/1\), basestock and \((Q,r)\) policy</li>
+<li>Provide underlying motivation for approximate models</li>
+
+</ol>
+</section>
+</section>
+<section>
+<section id="slide-orgd8f0709">
+<h2 id="orgd8f0709"><span class="section-number-2">2.</span> Examples</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgbf9c368">
+<h3 id="orgbf9c368"><span class="section-number-3">2.1.</span> Example in Discrete time</h3>
+<div>
+\begin{align*}
+d_i &= \min\{L_{i-1}, c_i\}, \\
+L_i &= L_{i-1} + a_i - d_i
+\end{align*}
+
+</div>
+
+<ol>
+<li>Use this recursion  to model a priority queue with blocking</li>
+<li>Use the recursion to model radiation reflection in the atmosphere due to \(CO_2\).</li>
+
+</ol>
+</section>
+</section>
+<section>
+<section id="slide-org238d09f">
+<h3 id="org238d09f"><span class="section-number-3">2.2.</span> Examples continuous time</h3>
+<p>
+\(D_i = \max\{A_i, D_{i-1}\} + S_i\)
+</p>
+
+<ol>
+<li>(Most) analytic tools apply in continuous time</li>
+<li>Simulation of priority queue with discrete event simulation.</li>
+<li>\(M/M/1\), etc, are continuous time models</li>
+
+</ol>
+</section>
+</section>
+<section>
+<section id="slide-org13cfe20">
+<h3 id="org13cfe20"><span class="section-number-3">2.3.</span> Example code:</h3>
+<div class="org-src-container">
+
+<pre  class="src src-python"   ><code trim><span style="color: #00d3d0;">num</span> = 10
+<span style="color: #00d3d0;">X</span> = rng.exponential(scale=1 / labda, size=num)
+<span style="color: #00d3d0;">S</span> = rng.exponential(scale=1 / mu, size=num)
+<span style="color: #00d3d0;">X</span>[0] = S[0] = 0
+<span style="color: #00d3d0;">A</span> = X.cumsum()
+
+<span style="color: #00d3d0;">D</span> = np.zeros_like(X)
+<span style="color: #b6a0ff;">for</span> i <span style="color: #b6a0ff;">in</span> <span style="color: #f78fe7;">range</span>(1, num):
+    <span style="color: #00d3d0;">D</span>[i] = <span style="color: #f78fe7;">max</span>(A[i], D[i - 1]) + S[i]
+
+<span style="color: #00d3d0;">J</span> = D - A  <span style="color: #ff9580; font-style: italic;"># </span><span style="color: #ff9580; font-style: italic;">sojourn times</span>
+<span style="color: #00d3d0;">W</span> = J - S  <span style="color: #ff9580; font-style: italic;"># </span><span style="color: #ff9580; font-style: italic;">waiting times</span>
+<span style="color: #f78fe7;">print</span>(J.mean(), J.var())
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgbf1e4e8">
+<h3 id="orgbf1e4e8"><span class="section-number-3">2.4.</span> Sample path proof, PASTA</h3>
+<p>
+Define:
+</p>
+<div>
+\begin{align*}
+ A(n,t) &:=  \sum_{k=1}^{A(t)}[L(A_k-) = n] , \\
+Y(n,t) &:= \int_0^t [L(s) = n] d s
+\end{align*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org70b91e8">
+<h3 id="org70b91e8"><span class="section-number-3">2.5.</span> Sample proof, PASTA</h3>
+<div>
+\begin{equation*}
+\frac{A(n,t)}{Y(n,t)}\frac{Y(n,t)}t  = \frac{A(n,t)}t =  \frac{A(t)}t \frac{A(n,t)}{A(t)}.
+\end{equation*}
+
+</div>
+<p>
+Assuming the limits for \(t \to \infty\) exist
+</p>
+<div>
+\begin{equation*}
+\lambda(n) p(n)  = \lambda \pi(n)
+\end{equation*}
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgcf4a652">
+<h3 id="orgcf4a652"><span class="section-number-3">2.6.</span> Examples: approximate models</h3>
+<p>
+Expected waiting time for \(G/G/1\) queue: \(E W \approx \frac{C_a^2+C_e^2}2 \frac\rho{1-\rho} E S\)
+</p>
+
+<p>
+Modify \(C_a^2\) and \(E S\) for systems with
+</p>
+<ol>
+<li>batch services</li>
+<li>setup times</li>
+<li>Failures</li>
+
+</ol>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+transition: 'fade',
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+
+});
+
+</script>
+</body>
+</html>
