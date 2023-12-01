@@ -52,27 +52,22 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#/slide-org8dd82c6">1. Design</a></li>
-<li><a href="#/slide-org249c42e">2. Examples</a></li>
+<li><a href="#/slide-org4e776cb">1. Design</a></li>
+<li><a href="#/slide-orgb1d06f1">2. Examples</a></li>
 </ul>
 </div>
 </div>
 </section>
 <section>
-<section id="slide-org8dd82c6">
-<h2 id="org8dd82c6"><span class="section-number-2">1.</span> Design</h2>
-<p>
-Expected waiting time for \(G/G/1\) queue: \(\E W \approx \frac{C_a^2+C_e^2}2 \frac\rho{1-\rho} \E S\)
-</p>
-
-<p>
-\(\E W\)
-</p>
+<section id="slide-org4e776cb">
+<h2 id="org4e776cb"><span class="section-number-2">1.</span> Design</h2>
+<div class="outline-text-2" id="text-1">
+</div>
 </section>
 </section>
 <section>
-<section id="slide-org9f4bbeb">
-<h3 id="org9f4bbeb"><span class="section-number-3">1.1.</span> Course design</h3>
+<section id="slide-orgf2e412b">
+<h3 id="orgf2e412b"><span class="section-number-3">1.1.</span> Course design</h3>
 <ul>
 <li>Make simple stochastic models for real cases, e.g., psychiatrist planning.</li>
 <li>Code, in Python, models to simulate, compute KPIs, and analyze control policies</li>
@@ -85,8 +80,8 @@ Expected waiting time for \(G/G/1\) queue: \(\E W \approx \frac{C_a^2+C_e^2}2 \f
 </section>
 </section>
 <section>
-<section id="slide-orgece6ff6">
-<h3 id="orgece6ff6"><span class="section-number-3">1.2.</span> Approach</h3>
+<section id="slide-org662ed78">
+<h3 id="org662ed78"><span class="section-number-3">1.2.</span> Approach</h3>
 <ol>
 <li>Start with memoryless property of exponential, Poisson.</li>
 <li>Use simulation to construct sample paths for stochastic process; develop intuition for such systems.</li>
@@ -97,8 +92,8 @@ Expected waiting time for \(G/G/1\) queue: \(\E W \approx \frac{C_a^2+C_e^2}2 \f
 </section>
 </section>
 <section>
-<section id="slide-orgdd15b3f">
-<h3 id="orgdd15b3f"><span class="section-number-3">1.3.</span> Approach 2</h3>
+<section id="slide-org22b1bc9">
+<h3 id="org22b1bc9"><span class="section-number-3">1.3.</span> Approach 2</h3>
 <ol>
 <li>Analyze the sample paths analytically to get theoretical tools:
 <ol>
@@ -115,15 +110,15 @@ Expected waiting time for \(G/G/1\) queue: \(\E W \approx \frac{C_a^2+C_e^2}2 \f
 </section>
 </section>
 <section>
-<section id="slide-org249c42e">
-<h2 id="org249c42e"><span class="section-number-2">2.</span> Examples</h2>
+<section id="slide-orgb1d06f1">
+<h2 id="orgb1d06f1"><span class="section-number-2">2.</span> Examples</h2>
 <div class="outline-text-2" id="text-2">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org0ac77c5">
-<h3 id="org0ac77c5"><span class="section-number-3">2.1.</span> Example in Discrete time</h3>
+<section id="slide-org006be56">
+<h3 id="org006be56"><span class="section-number-3">2.1.</span> Example in Discrete time</h3>
 <div>
 \begin{align*}
 d_i &= \min\{L_{i-1}, c_i\}, \\
@@ -140,8 +135,8 @@ L_i &= L_{i-1} + a_i - d_i
 </section>
 </section>
 <section>
-<section id="slide-orgb3912f4">
-<h3 id="orgb3912f4"><span class="section-number-3">2.2.</span> Examples continuous time</h3>
+<section id="slide-orge5d69a8">
+<h3 id="orge5d69a8"><span class="section-number-3">2.2.</span> Examples continuous time</h3>
 <p>
 \(D_i = \max\{A_i, D_{i-1}\} + S_i\)
 </p>
@@ -155,8 +150,8 @@ L_i &= L_{i-1} + a_i - d_i
 </section>
 </section>
 <section>
-<section id="slide-org653671f">
-<h3 id="org653671f"><span class="section-number-3">2.3.</span> Example code:</h3>
+<section id="slide-org2265a89">
+<h3 id="org2265a89"><span class="section-number-3">2.3.</span> Example code:</h3>
 <div class="org-src-container">
 
 <pre  class="src src-python"   ><code trim><span style="color: #00d3d0;">num</span> = 10
@@ -177,8 +172,8 @@ L_i &= L_{i-1} + a_i - d_i
 </section>
 </section>
 <section>
-<section id="slide-org0ab5f4e">
-<h3 id="org0ab5f4e"><span class="section-number-3">2.4.</span> Sample path proof, PASTA</h3>
+<section id="slide-org07cb2f7">
+<h3 id="org07cb2f7"><span class="section-number-3">2.4.</span> Sample path proof, PASTA</h3>
 <p>
 Define:
 </p>
@@ -192,8 +187,8 @@ Y(n,t) &:= \int_0^t \1{L(s) = n} d s
 </section>
 </section>
 <section>
-<section id="slide-orgd670a8c">
-<h3 id="orgd670a8c"><span class="section-number-3">2.5.</span> Sample proof, PASTA</h3>
+<section id="slide-org74bac70">
+<h3 id="org74bac70"><span class="section-number-3">2.5.</span> Sample proof, PASTA</h3>
 <div>
 \begin{equation*}
 \frac{A(n,t)}{Y(n,t)}\frac{Y(n,t)}t  = \frac{A(n,t)}t =  \frac{A(t)}t \frac{A(n,t)}{A(t)}.
@@ -212,8 +207,8 @@ Assuming the limits for \(t \to \infty\) exist
 </section>
 </section>
 <section>
-<section id="slide-orgb091a99">
-<h3 id="orgb091a99"><span class="section-number-3">2.6.</span> Examples: approximate models</h3>
+<section id="slide-orgb4d1a7a">
+<h3 id="orgb4d1a7a"><span class="section-number-3">2.6.</span> Examples: approximate models</h3>
 <p>
 Expected waiting time for \(G/G/1\) queue: \(\E W \approx \frac{C_a^2+C_e^2}2 \frac\rho{1-\rho} \E S\)
 </p>
