@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <title>Stochastic OR/QTS</title>
-<meta name="author" content="Nicky"/>
+<meta name="author" content="Nicky van Foreest"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
 <style type="text/css">
@@ -25,23 +25,54 @@
     }
 </script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+TeX: {
+Macros: {
+RR: "\\mathbb{R}",
+1: ["\\mathbf{1}\\{#1\\}",1],
+E: ["\\textrm{E}\\left\\{#1\\right\\}", 1],
+P: ["\\textrm{P}\\left\\{#1\\right\\}", 1],
+d: ["\\,\\textrm{d}#1", 1],
+}
+}
+});
+</script>
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_CHTML">
+</script>
 </head>
 <body>
 <div class="reveal">
 <div class="slides">
 <section id="sec-title-slide"><h1 class="title">Stochastic OR/QTS</h1><p class="subtitle"></p>
-<h2 class="author">Nicky</h2><h2 class="email"><a href="mailto:nicky@chuck">nicky@chuck</a></h2>
+<h2 class="author">Nicky van Foreest</h2><h2 class="email"><a href="mailto:n.d.van.foreest@rug.nl">n.d.van.foreest@rug.nl</a></h2><h2 class="date">2023:11:29</h2>
 </section>
-<section>
-<section id="slide-org7ed8caf">
-<h2 id="org7ed8caf"><span class="section-number-2">1.</span> Design</h2>
-<div class="outline-text-2" id="text-1">
+<section id="sec-table-of-contents"><div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#/slide-org8dd82c6">1. Design</a></li>
+<li><a href="#/slide-org249c42e">2. Examples</a></li>
+</ul>
+</div>
 </div>
 </section>
+<section>
+<section id="slide-org8dd82c6">
+<h2 id="org8dd82c6"><span class="section-number-2">1.</span> Design</h2>
+<p>
+Expected waiting time for \(G/G/1\) queue: \(\E W \approx \frac{C_a^2+C_e^2}2 \frac\rho{1-\rho} \E S\)
+</p>
+
+<p>
+\(\E W\)
+</p>
+</section>
 </section>
 <section>
-<section id="slide-org81c7069">
-<h3 id="org81c7069"><span class="section-number-3">1.1.</span> Course design</h3>
+<section id="slide-org9f4bbeb">
+<h3 id="org9f4bbeb"><span class="section-number-3">1.1.</span> Course design</h3>
 <ul>
 <li>Make simple stochastic models for real cases, e.g., psychiatrist planning.</li>
 <li>Code, in Python, models to simulate, compute KPIs, and analyze control policies</li>
@@ -54,8 +85,8 @@
 </section>
 </section>
 <section>
-<section id="slide-orgb81bbd0">
-<h3 id="orgb81bbd0"><span class="section-number-3">1.2.</span> Approach</h3>
+<section id="slide-orgece6ff6">
+<h3 id="orgece6ff6"><span class="section-number-3">1.2.</span> Approach</h3>
 <ol>
 <li>Start with memoryless property of exponential, Poisson.</li>
 <li>Use simulation to construct sample paths for stochastic process; develop intuition for such systems.</li>
@@ -66,8 +97,8 @@
 </section>
 </section>
 <section>
-<section id="slide-org801a3b9">
-<h3 id="org801a3b9"><span class="section-number-3">1.3.</span> Approach 2</h3>
+<section id="slide-orgdd15b3f">
+<h3 id="orgdd15b3f"><span class="section-number-3">1.3.</span> Approach 2</h3>
 <ol>
 <li>Analyze the sample paths analytically to get theoretical tools:
 <ol>
@@ -84,15 +115,15 @@
 </section>
 </section>
 <section>
-<section id="slide-orgd8f0709">
-<h2 id="orgd8f0709"><span class="section-number-2">2.</span> Examples</h2>
+<section id="slide-org249c42e">
+<h2 id="org249c42e"><span class="section-number-2">2.</span> Examples</h2>
 <div class="outline-text-2" id="text-2">
 </div>
 </section>
 </section>
 <section>
-<section id="slide-orgbf9c368">
-<h3 id="orgbf9c368"><span class="section-number-3">2.1.</span> Example in Discrete time</h3>
+<section id="slide-org0ac77c5">
+<h3 id="org0ac77c5"><span class="section-number-3">2.1.</span> Example in Discrete time</h3>
 <div>
 \begin{align*}
 d_i &= \min\{L_{i-1}, c_i\}, \\
@@ -109,8 +140,8 @@ L_i &= L_{i-1} + a_i - d_i
 </section>
 </section>
 <section>
-<section id="slide-org238d09f">
-<h3 id="org238d09f"><span class="section-number-3">2.2.</span> Examples continuous time</h3>
+<section id="slide-orgb3912f4">
+<h3 id="orgb3912f4"><span class="section-number-3">2.2.</span> Examples continuous time</h3>
 <p>
 \(D_i = \max\{A_i, D_{i-1}\} + S_i\)
 </p>
@@ -124,8 +155,8 @@ L_i &= L_{i-1} + a_i - d_i
 </section>
 </section>
 <section>
-<section id="slide-org13cfe20">
-<h3 id="org13cfe20"><span class="section-number-3">2.3.</span> Example code:</h3>
+<section id="slide-org653671f">
+<h3 id="org653671f"><span class="section-number-3">2.3.</span> Example code:</h3>
 <div class="org-src-container">
 
 <pre  class="src src-python"   ><code trim><span style="color: #00d3d0;">num</span> = 10
@@ -146,23 +177,23 @@ L_i &= L_{i-1} + a_i - d_i
 </section>
 </section>
 <section>
-<section id="slide-orgbf1e4e8">
-<h3 id="orgbf1e4e8"><span class="section-number-3">2.4.</span> Sample path proof, PASTA</h3>
+<section id="slide-org0ab5f4e">
+<h3 id="org0ab5f4e"><span class="section-number-3">2.4.</span> Sample path proof, PASTA</h3>
 <p>
 Define:
 </p>
 <div>
 \begin{align*}
- A(n,t) &:=  \sum_{k=1}^{A(t)}[L(A_k-) = n] , \\
-Y(n,t) &:= \int_0^t [L(s) = n] d s
+ A(n,t) &:=  \sum_{k=1}^{A(t)}\1{L(A_k-) = n} , \\
+Y(n,t) &:= \int_0^t \1{L(s) = n} d s
 \end{align*}
 
 </div>
 </section>
 </section>
 <section>
-<section id="slide-org70b91e8">
-<h3 id="org70b91e8"><span class="section-number-3">2.5.</span> Sample proof, PASTA</h3>
+<section id="slide-orgd670a8c">
+<h3 id="orgd670a8c"><span class="section-number-3">2.5.</span> Sample proof, PASTA</h3>
 <div>
 \begin{equation*}
 \frac{A(n,t)}{Y(n,t)}\frac{Y(n,t)}t  = \frac{A(n,t)}t =  \frac{A(t)}t \frac{A(n,t)}{A(t)}.
@@ -181,14 +212,14 @@ Assuming the limits for \(t \to \infty\) exist
 </section>
 </section>
 <section>
-<section id="slide-orgcf4a652">
-<h3 id="orgcf4a652"><span class="section-number-3">2.6.</span> Examples: approximate models</h3>
+<section id="slide-orgb091a99">
+<h3 id="orgb091a99"><span class="section-number-3">2.6.</span> Examples: approximate models</h3>
 <p>
-Expected waiting time for \(G/G/1\) queue: \(E W \approx \frac{C_a^2+C_e^2}2 \frac\rho{1-\rho} E S\)
+Expected waiting time for \(G/G/1\) queue: \(\E W \approx \frac{C_a^2+C_e^2}2 \frac\rho{1-\rho} \E S\)
 </p>
 
 <p>
-Modify \(C_a^2\) and \(E S\) for systems with
+Modify \(C_a^2\) and \(\E S\) for systems with
 </p>
 <ol>
 <li>batch services</li>
